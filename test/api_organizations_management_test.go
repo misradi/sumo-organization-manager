@@ -11,10 +11,10 @@ package openapi
 
 import (
 	"context"
+	openapiclient "github.com/misradi/sumo-organization-manager"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService CreateAccessKey", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -38,7 +38,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService CreateOrganization", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OrganizationsManagementAPI.CreateOrganization(context.Background()).Execute()
 
@@ -50,7 +50,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService DeleteOrg", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -64,7 +64,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService DelinkOrg", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OrganizationsManagementAPI.DelinkOrg(context.Background()).Execute()
 
@@ -76,7 +76,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService GetAllocatedCredits", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OrganizationsManagementAPI.GetAllocatedCredits(context.Background()).Execute()
 
@@ -88,7 +88,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService GetDeployments", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OrganizationsManagementAPI.GetDeployments(context.Background()).Execute()
 
@@ -100,7 +100,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService GetOrgUsage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -114,7 +114,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService GetOrganization", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -128,7 +128,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService GetParentOrgDetails", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OrganizationsManagementAPI.GetParentOrgDetails(context.Background()).Execute()
 
@@ -140,7 +140,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService GetParentOrgInfo", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OrganizationsManagementAPI.GetParentOrgInfo(context.Background()).Execute()
 
@@ -152,7 +152,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService GetProvisioning", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -166,7 +166,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService GetSubdomainLoginUrl", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 
@@ -180,7 +180,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService GetUsages", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OrganizationsManagementAPI.GetUsages(context.Background()).Execute()
 
@@ -192,7 +192,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService ListOrganizations", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.OrganizationsManagementAPI.ListOrganizations(context.Background()).Execute()
 
@@ -204,7 +204,7 @@ func Test_openapi_OrganizationsManagementAPIService(t *testing.T) {
 
 	t.Run("Test OrganizationsManagementAPIService UpdateSubscription", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var orgId string
 

@@ -26,7 +26,7 @@ type ParentOrgInfo struct {
 	// List of deployment charges for the customer for setting up child org in each deployment.
 	DeploymentCharges []DeploymentCharge `json:"deploymentCharges,omitempty"`
 	// Plan name of the account.
-	PlanName *String `json:"planName,omitempty"`
+	PlanName *string `json:"planName,omitempty"`
 }
 
 // NewParentOrgInfo instantiates a new ParentOrgInfo object
@@ -143,9 +143,9 @@ func (o *ParentOrgInfo) SetDeploymentCharges(v []DeploymentCharge) {
 }
 
 // GetPlanName returns the PlanName field value if set, zero value otherwise.
-func (o *ParentOrgInfo) GetPlanName() String {
+func (o *ParentOrgInfo) GetPlanName() string {
 	if o == nil || IsNil(o.PlanName) {
-		var ret String
+		var ret string
 		return ret
 	}
 	return *o.PlanName
@@ -153,7 +153,7 @@ func (o *ParentOrgInfo) GetPlanName() String {
 
 // GetPlanNameOk returns a tuple with the PlanName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ParentOrgInfo) GetPlanNameOk() (*String, bool) {
+func (o *ParentOrgInfo) GetPlanNameOk() (*string, bool) {
 	if o == nil || IsNil(o.PlanName) {
 		return nil, false
 	}
@@ -169,8 +169,8 @@ func (o *ParentOrgInfo) HasPlanName() bool {
 	return false
 }
 
-// SetPlanName gets a reference to the given String and assigns it to the PlanName field.
-func (o *ParentOrgInfo) SetPlanName(v String) {
+// SetPlanName gets a reference to the given string and assigns it to the PlanName field.
+func (o *ParentOrgInfo) SetPlanName(v string) {
 	o.PlanName = &v
 }
 

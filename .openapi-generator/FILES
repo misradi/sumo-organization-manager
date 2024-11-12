@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -91,5 +90,4 @@ model_trial_plan_all_of.go
 model_usage.go
 model_usage_per_product_variable.go
 response.go
-test/api_organizations_management_test.go
 utils.go
