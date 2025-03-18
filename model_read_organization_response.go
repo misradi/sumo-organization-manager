@@ -28,7 +28,7 @@ type ReadOrganizationResponse struct {
 	// First name of the account owner.
 	FirstName string `json:"firstName"`
 	// Last name of the account owner.
-	LastName     *string             `json:"lastName,omitempty"`
+	LastName *string `json:"lastName,omitempty"`
 	Subscription CreditsSubscription `json:"subscription"`
 	// The unique identifier of an organization. It consists of the deployment ID and the hexadecimal account ID separated by a dash `-` character.
 	OrgId string `json:"orgId"`
@@ -290,7 +290,7 @@ func (o *ReadOrganizationResponse) UnmarshalJSON(data []byte) (err error) {
 		return err
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
