@@ -30,7 +30,7 @@ type Baselines struct {
 	// The average daily amount of tracing data this child org is expected to ingest, in GB. This is currently not available for all customers. It will be enabled only if available for your organization. Please contact your Sumo Logic account team to learn more.
 	TracingIngest *int64 `json:"tracingIngest,omitempty"`
 	// The average daily amount of cse data this child org is expected to ingest, in GB.  This is currently not available for all customers. It will be enabled only if available for your organization. Please contact your Sumo Logic account team to learn more.
-	CseIngest         *int64             `json:"cseIngest,omitempty"`
+	CseIngest *int64 `json:"cseIngest,omitempty"`
 	FeatureActivation *FeatureActivation `json:"featureActivation,omitempty"`
 	// Total number of credits to be allocated to the child organization. This field is applicable only in CREATE a new organization and UPDATE an organization requests.
 	TotalCreditsAllocated *int64 `json:"totalCreditsAllocated,omitempty"`
