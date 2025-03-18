@@ -1,7 +1,7 @@
 /*
 Sumo Logic Organizations Management API
 
-Welcome to the Sumo Logic's API Reference for Organizations Management. You can use these APIs to interact with the Sumo Logic platform to manage accounts and subscription. Refer to [API Authentication](https://help.sumologic.com/APIs/General-API-Information/API-Authentication) for more information about authentication. You can also look at [other APIs](https://help.sumologic.com/APIs) for more information about some other API endpoints. 
+Welcome to the Sumo Logic's API Reference for Organizations Management. You can use these APIs to interact with the Sumo Logic platform to manage accounts and subscription. Refer to [API Authentication](https://help.sumologic.com/APIs/General-API-Information/API-Authentication) for more information about authentication. You can also look at [other APIs](https://help.sumologic.com/APIs) for more information about some other API endpoints.
 
 API version: 1.0.0
 */
@@ -34,6 +34,10 @@ type Baselines struct {
 	FeatureActivation *FeatureActivation `json:"featureActivation,omitempty"`
 	// Total number of credits to be allocated to the child organization. This field is applicable only in CREATE a new organization and UPDATE an organization requests.
 	TotalCreditsAllocated *int64 `json:"totalCreditsAllocated,omitempty"`
+	// Only applicable for Flex orgs
+	FlexIngest    *int64 `json:"flexIngest,omitempty"`
+	FlexStorage   *int64 `json:"flexStorage,omitempty"`
+	FlexScanRatio *int64 `json:"flexScanRatio,omitempty"`
 }
 
 // NewBaselines instantiates a new Baselines object
@@ -334,7 +338,7 @@ func (o *Baselines) SetTotalCreditsAllocated(v int64) {
 }
 
 func (o Baselines) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -405,5 +409,3 @@ func (v *NullableBaselines) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -1,7 +1,7 @@
 /*
 Sumo Logic Organizations Management API
 
-Welcome to the Sumo Logic's API Reference for Organizations Management. You can use these APIs to interact with the Sumo Logic platform to manage accounts and subscription. Refer to [API Authentication](https://help.sumologic.com/APIs/General-API-Information/API-Authentication) for more information about authentication. You can also look at [other APIs](https://help.sumologic.com/APIs) for more information about some other API endpoints. 
+Welcome to the Sumo Logic's API Reference for Organizations Management. You can use these APIs to interact with the Sumo Logic platform to manage accounts and subscription. Refer to [API Authentication](https://help.sumologic.com/APIs/General-API-Information/API-Authentication) for more information about authentication. You can also look at [other APIs](https://help.sumologic.com/APIs) for more information about some other API endpoints.
 
 API version: 1.0.0
 */
@@ -11,8 +11,8 @@ API version: 1.0.0
 package openapi
 
 import (
-	"encoding/json"
 	"bytes"
+	"encoding/json"
 	"fmt"
 )
 
@@ -34,6 +34,8 @@ type ReadOrganizationResponse struct {
 	OrgId string `json:"orgId"`
 	// Identifier of the deployment in which the organization is present.
 	DeploymentId *string `json:"deploymentId,omitempty" validate:"regexp=^(mb|stag|long|prod|us2|dub|syd|mum|fra|tky|mon|fed|au|ca|de|eu|in|jp|us1)$"`
+	// Only applicable for flex orgs
+	IsSSOSetup bool `json:"isSSOSetup"`
 }
 
 type _ReadOrganizationResponse ReadOrganizationResponse
@@ -245,7 +247,7 @@ func (o *ReadOrganizationResponse) SetDeploymentId(v string) {
 }
 
 func (o ReadOrganizationResponse) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -285,7 +287,7 @@ func (o *ReadOrganizationResponse) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err;
+		return err
 	}
 
 	for _, requiredProperty := range(requiredProperties) {
@@ -344,5 +346,3 @@ func (v *NullableReadOrganizationResponse) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-
